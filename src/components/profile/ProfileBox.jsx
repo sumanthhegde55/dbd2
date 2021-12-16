@@ -1,7 +1,7 @@
 import React, { useState ,useContext} from 'react'
 import { AccountContext } from '../context/AccountProvider';
 import {FunctionsContext} from '../context/FunctionsProvider';
-import './style.css';
+import './style3.css';
 
 const ProfileBox = () => {
 

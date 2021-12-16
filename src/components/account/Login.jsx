@@ -15,6 +15,7 @@ const Login = ({login,setLogin}) => {
       <Dialog
         open={openLogin}
         onClose={handleClose}
+        style={{overflow:'hidden'}}
       > <LoginForm/>
       </Dialog>
         </>

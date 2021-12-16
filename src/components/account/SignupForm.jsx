@@ -102,7 +102,7 @@ export default class SignupForm extends Component {
   render() {
     const { errors } = this.state;
     return (
-      <div className="wrapper" style={{height:'auto'}}>
+      <div className="wrapper" style={{height:'auto',overflow:'hidden'}}>
         <div className="form-wrapper">
           <h2>Create Account</h2>
           <form onSubmit={this.handleSubmit} noValidate>
@@ -113,6 +113,7 @@ export default class SignupForm extends Component {
                   type="text"
                   name="firstName"
                   onChange={this.handleChange}
+                  style={{width:'100%'}}
                   noValidate
                   placeholder={this.state.firstName}
                 />
@@ -126,6 +127,7 @@ export default class SignupForm extends Component {
                   type="text"
                   name="lastName"
                   onChange={this.handleChange}
+                  style={{width:'100%'}}
                   noValidate
                   placeholder={this.state.lastName}
                 />
@@ -138,6 +140,7 @@ export default class SignupForm extends Component {
                 name="email"
                 onChange={this.handleChange}
                 noValidate
+                style={{width:'90%'}}
                 placeholder={this.state.email}
               />
               {errors.email.length > 0 && (
@@ -151,6 +154,7 @@ export default class SignupForm extends Component {
                 name="password"
                 onChange={this.handleChange}
                 noValidate
+                style={{width:'100%'}}
                 placeholder={this.state.password}
               />
               {errors.password.length > 0 && (

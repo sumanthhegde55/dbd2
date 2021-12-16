@@ -13,26 +13,28 @@ import logo8 from './4.PNG';
 import logo9 from './4.5.PNG';
 import logo10 from './5.PNG';
 
-import Rating from './Rating';
+// import Rating from './Rating';
+
+import {Box} from '@material-ui/core'
 
 const ratings = [
     {
         "user":"Ram Rajan",
         "rating":"4",
         "review":"decent book to read.",
-        "image" : {imageUrl}
+        "image" : 'https://icon-library.com/images/no-user-image-icon/no-user-image-icon-7.jpg'
     },
     {
         "user":"Mohan Roy",
         "rating":"3.5",
         "review":"got bored with the style of writing of the author",
-        "image" : {imageUrl}
+        "image" : 'https://icon-library.com/images/no-user-image-icon/no-user-image-icon-7.jpg'
     },
     {
         "user":"Harish Rangaya",
         "rating":"5",
         "review":"excellent book .This book is on my fav list now",
-        "image" : {imageUrl}
+        "image" : 'https://icon-library.com/images/no-user-image-icon/no-user-image-icon-7.jpg'
     }
 ]
 
@@ -78,14 +80,23 @@ const SingleBook = () => {
             <img src={num} alt="rating"/>
             <div style={{paddingTop:'30px'}}>
                 <b>REVIEWS</b>
-                {/* <div>
-                {
-                    ratings.map((value,index)=>{
-                        // console.log({value},index);
-                        return <div>{value['user']}</div>;
-                    })
-                }   
-                </div> */}
+                <Box>
+                            {
+                                ratings.map((r,index) =>{
+                                    return(
+                                        <div style={{display:'flex',flexDirection:'row'}}>
+                                             <div>
+                                                <img src={r.image} alt="profilePic" style={{width:'30px'}}/>
+                                                <div>{r.user}</div>
+                                            </div>
+                                            <div style={{marginLeft:'40px',textAlign:'left'}}>
+                                                <p>{r.review}</p>
+                                            </div>
+                                        </div>
+                                    )
+                                })
+                            }
+                </Box>
             </div>
             <button onClick = {() => setBookId({})} style={{marginTop:'30px'}}> Back</button>
         </div>

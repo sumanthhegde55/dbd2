@@ -105,11 +105,12 @@ const LoginForm = () =>{
               )}
             </div>
             <div className="password">
-              <label htmlFor="password">Password</label>
+              <label htmlFor="password">Password</label><br/>
               <input
                 type="password"
                 name="password"
                 onChange={handleChange}
+                style={{width:'100%'}}
                 // noValidate
               />
               {errors.password.length > 0 && (
