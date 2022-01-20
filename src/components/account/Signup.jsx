@@ -2,7 +2,7 @@ import React, {useContext,useState} from 'react'
 import SignupForm from './SignupForm';
 import { AccountContext } from '../context/AccountProvider';
 import {Dialog,makeStyles} from '@material-ui/core';
-import classNames from 'classnames';
+//import classNames from 'classnames';
 
 const useStyles = makeStyles({
     dialog:{
