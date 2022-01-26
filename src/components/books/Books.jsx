@@ -26,11 +26,11 @@ const Books = () => {
         const f = async () =>{
             await axios.get('http://35.200.201.135:8089/books')
             .then((res) =>{
-                console.log("data received from backend: ",res.data['books']);
+                console.log("data received from backend: ",res.data);
                 //setBooks(res.data['books']);
             })
             .catch((err) => console.log(err)); 
-        }
+      
         f();
     },[])
     console.log("books : ",books);
