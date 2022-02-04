@@ -8,7 +8,6 @@ const AccountProvider = ({children}) => {
             l_name : res.profileObj.familyName,
             e_mail : res.profileObj.email,
             image : res.profileObj.imageUrl,
-            // password:null
     }
     
     const [account,setAccount] = useState(user);
