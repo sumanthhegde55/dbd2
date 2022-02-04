@@ -3,7 +3,15 @@ import {createContext,useState} from 'react'
 export const AccountContext = createContext(null);
 
 const AccountProvider = ({children}) => {
-    const [account,setAccount] = useState(null);
+    let user = {
+            f_name : res.profileObj.givenName,
+            l_name : res.profileObj.familyName,
+            e_mail : res.profileObj.email,
+            image : res.profileObj.imageUrl,
+            // password:null
+    }
+    
+    const [account,setAccount] = useState(user);
     const [openSignup,setOpenSignup] = useState(false);
     const [openLogin,setOpenLogin] = useState(false);
     const [profile,setProfile] = useState(false);
