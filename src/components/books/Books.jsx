@@ -17,7 +17,6 @@ const useStyles = makeStyles({
     }
 })
 const Books = () => {
-    // const [page,setPage] = useState(0);
     const {page,setPage,setBookId} = useContext(FunctionsContext);
     
     const classes = useStyles();
