@@ -39,7 +39,7 @@ const BookCard = (props) =>{
             {name}
           </Typography>
           <Typography variant="body2" color="textSecondary" component="p">
-            This is book {id} written by {author}
+           {author}
           </Typography>
         </CardContent>
       </CardActionArea>
