@@ -3,7 +3,8 @@ import {createContext,useState} from 'react'
 export const AccountContext = createContext(null);
 
 const AccountProvider = ({children}) => {
-    let user = {
+    
+    const user = {
             f_name : res.profileObj.givenName,
             l_name : res.profileObj.familyName,
             e_mail : res.profileObj.email,
