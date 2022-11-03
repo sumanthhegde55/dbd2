@@ -17,22 +17,7 @@ const LoginForm = () =>{
             console.log("failed");
         };
         const onLoginSuccess = (res) => {
-            // console.log("success")
-            // try{
-            //   await axios.post('http://localhost:3002/login',res.profileObj)
-            //   .then((result) => {
-            //           // console.log(res);
-            //           if(result.data === '') alert("invalid login");
-            //           else{
-            //               console.log(result.data);
-            //               alert("Successfully logged in!");
-            //               setAccount(res.profileObj);
-            //           }
-            //   })
-          //     .catch((err) => console.log(err))
-          // }catch(e){
-          //     console.log("error : ",e);
-          // }
+            
           let user = {
             f_name : res.profileObj.givenName,
             l_name : res.profileObj.familyName,
@@ -57,25 +42,7 @@ const LoginForm = () =>{
 
         const handleSubmit = async (event) => {
             event.preventDefault();
-            // try{
-                // const user = {
-                //     "email" : email,
-                //     "password" : password,
-                // }
-            //     await axios.post('http://localhost:3002/login',user)
-            //     .then((res) => {
-            //             console.log(res);
-            //             if(res.data === '') alert("invalid login");
-            //             else{
-            //                 console.log(res);
-            //                 setAccount(res);
-            //                 alert("Successfully logged in!");
-            //             }
-            //     })
-            //     .catch((err) => console.log(err))
-            // }catch(e){
-            //     console.log("error : ",e);
-            // }
+            
             const user = {
               f_name : "aaa",
               l_name : "bbb",
