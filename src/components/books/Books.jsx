@@ -23,9 +23,7 @@ const Books = () => {
     const [books,setBooks] = useState({});
     useEffect(() =>{
         const f = async () =>{
-            await axios.get('http://192.168.49.2:32004/books', {
-    headers: {'Access-Control-Allow-Origin': '*'}
-})
+            await axios.get('http://192.168.49.2:32004/books',{crossdomain: true })
             .then((res) =>{
                 console.log("data received from backend: ",res.data);
                 setBooks(res.data);
