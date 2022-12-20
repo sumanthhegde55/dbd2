@@ -23,7 +23,7 @@ const Books = () => {
     const [books,setBooks] = useState({});
     useEffect(() =>{
         const f = async () =>{
-            await axios.get('http://localhost:8089/books')
+            await axios.get('http://192.168.49.2:8089/books')
             .then((res) =>{
                 console.log("data received from backend: ",res.data);
                 setBooks(res.data);
